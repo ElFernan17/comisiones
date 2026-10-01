@@ -45,9 +45,17 @@ function recuperarTexto(idComponente) {
 }
 
 function recuperarFloat(idComponente) {
-  
+
   let valorTexto = recuperarTexto(idComponente);
   let valorFloat = parseFloat(valorTexto);
+
+  return valorFloat;
+}
+
+function recuperarEntero(idComponente) {
+  
+  let valorTexto = recuperarTexto(idComponente);
+  let valorFloat = parseInt(valorTexto);
 
   return valorFloat;
 }

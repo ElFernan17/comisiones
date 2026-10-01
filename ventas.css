@@ -1,35 +1,157 @@
+/* ---------- Base ---------- */
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial;
-    background-color: #0f172a;
-    color: white;
+    margin: 0;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    padding: 16px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: #0f172a;
+    color: #e2e8f0;
 }
 
+/* ---------- Tarjeta ---------- */
 .contenedor {
+    width: 100%;
+    max-width: 420px;
+    padding: 24px;
     background-color: #1e293b;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
+    border: 1px solid #334155;
+    border-radius: 12px;
+}
+
+h1 {
+    margin: 0 0 24px;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    font-weight: 600;
+    color: #f8fafc;
+}
+
+h2 {
+    margin: 0 0 12px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #f8fafc;
+}
+
+/* ---------- Formulario ---------- */
+.campo {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    color: #94a3b8;
 }
 
 input {
     width: 100%;
-    margin-bottom: 10px;
-    padding: 5px;
+    padding: 12px;
+    font-size: 1rem; /* 16px evita el zoom automático en iPhone */
+    font-family: inherit;
+    color: #f8fafc;
+    background-color: #0f172a;
+    border: 1px solid #475569;
+    border-radius: 8px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #22c55e;
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
 }
 
 button {
     width: 100%;
-    padding: 10px;
+    margin-top: 8px;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    color: #052e16;
     background-color: #22c55e;
     border: none;
-    color: white;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.15s;
 }
 
 button:hover {
     background-color: #16a34a;
+}
+
+button:focus-visible {
+    outline: 3px solid #86efac;
+    outline-offset: 2px;
+}
+
+/* ---------- Resultados ---------- */
+.resultados {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid #334155;
+}
+
+.resultados p {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #334155;
+    color: #94a3b8;
+}
+
+.resultados span {
+    color: #f8fafc;
+    font-weight: 600;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.resultados .total {
+    border-bottom: none;
+    color: #e2e8f0;
+    font-weight: 600;
+}
+
+.resultados .total span {
+    color: #22c55e;
+    font-size: 1.25rem;
+}
+
+/* ---------- Tablet y computador ---------- */
+@media (min-width: 600px) {
+    .contenedor {
+        padding: 32px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+}
+
+/* ---------- Celulares muy pequeños ---------- */
+@media (max-width: 360px) {
+    body {
+        padding: 8px;
+    }
+
+    .contenedor {
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
 }

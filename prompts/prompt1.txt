@@ -1,0 +1,2 @@
+actua como un diseñador grafico de paginas web y has que esta paguina web sea "responsive" es decir que se ve bien en celulares tablets y computadores, quiero que dejes separados el archivo css y el html y no toques los ids de nada para que siga funcionando correctamente, dale un estilo minimalista y mas claro y legible para las personas sin cambiar demasialo los colores
+
