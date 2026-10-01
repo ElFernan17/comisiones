@@ -6,7 +6,7 @@ function calcularComision(ventas, producto) {
     if (ventas > ventasBase) {
         let ventasExtra = ventas - ventasBase;
 
-        let comision = ventasExtra * (producto * 0.10);
+        comision = ventasExtra * (producto * 0.10);
     }
 
     return comision
@@ -37,4 +37,10 @@ function calcular(){
     let comision = calcularComision(ventas, precio);
 
     let total = sueldoBase + comision
+
+    mostrarTextoSpan("spSueldoBase", sueldoBase)
+
+    mostrarTextoSpan("spComision", comision)
+
+    mostrarTextoSpan("spTotal", total)
 }
